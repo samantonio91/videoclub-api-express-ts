@@ -1,6 +1,6 @@
 # VideoClub API — Express 5 + TypeScript
 
-A backend learning project reimplementing the **seven operations** from [VideoClub Java/Spring Boot](https://github.com/samantonio91/videoClub) with Express, TypeScript and dependency injection through repository interfaces.
+A backend learning project reimplementing the **seven operations** from [VideoClub Java/Spring Boot](https://github.com/samantonio91/videoclub-api-java) with Express, TypeScript and dependency injection through repository interfaces.
 
 **Status:** working starter API using **in-memory data**, not persistent storage. No authentication, rentals, or payments. Data is lost on restart.
 
@@ -47,11 +47,16 @@ You can filter customers using `GET /api/customers?name=ana&documentId=abc`; mat
 - `src/app.ts`: isolated Express app construction and error handling
 - `tests/api.test.ts`: Vitest + Supertest endpoint tests
 
-## Next iterations
+## Roadmap and related implementations
 
-1. Add persistent adapters using Prisma and PostgreSQL/MySQL; retain repository interfaces.
-2. Extend the model with movies, rentals, returns and availability.
-3. Add OpenAPI, Docker and a richer integration test suite.
-4. Compare architecture and tests against the Java Spring Boot implementation and a later NestJS project.
+The prioritized, issue-linked development backlog is in [ROADMAP.md](ROADMAP.md). Work is implemented in small pull requests with tests; planned features are not yet available.
+
+This project is one implementation in the **VideoClub backend comparison**:
+
+- [Java + Spring Boot](https://github.com/samantonio91/videoclub-api-java): Java and JPA.
+- **Express + TypeScript** (this repository): explicit route/service/repository composition.
+- [NestJS + TypeScript](https://github.com/samantonio91/videoclub-api-nestjs-ts): NestJS modules and dependency injection.
+
+The repositories are learning exercises, not separate commercial products.
 
 README en español: [README.es.md](README.es.md).
